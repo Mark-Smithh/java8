@@ -2,8 +2,18 @@ package com.mark;
 
 public class Job {
 	private boolean writeCode;
-	private int salery;
+	private Integer salery;
 	private String jobTitle;
+	
+	@SuppressWarnings("unused")
+	private Job(){		
+	}
+	
+	public Job(Integer salery,boolean coder, String jobTitle){
+		this.salery = salery;
+		this.writeCode = coder;
+		this.jobTitle = jobTitle;
+	}
 	
 	public boolean isWriteCode() {
 		return writeCode;
@@ -11,13 +21,12 @@ public class Job {
 	public void setWriteCode(boolean writeCode) {
 		this.writeCode = writeCode;
 	}
-	
-	
-	public int getSalery() {
+		
+	public Integer getSalery() {
 		return salery;
 	}
 	
-	public void setSalery(int salery) {
+	public void setSalery(Integer salery) {
 		this.salery = salery;
 	}
 	
