@@ -47,15 +47,4 @@ public class JobFilter {
 		Job job = new Job(salery,coder,jobTitle);		
 		allJobs.add(job);
 	}
-	
-	@SuppressWarnings("unused")
-	public void sameLambdaDiffWays(){
-		Predicate<Integer> pred = (Integer num)->{return StringUtils.isEmpty(num.toString());};
-		
-		Predicate<Integer> pred1 = (Integer num)-> StringUtils.isEmpty(num.toString());
-		
-		Predicate<Integer> pred2 = (Integer num)-> { //same as pred just added carriage returns
-			return StringUtils.isEmpty(num.toString());
-		};
-	}
 }
